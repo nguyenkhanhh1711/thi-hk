@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Đề thi Tiếng Anh: Green Living</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Be+Vietnam+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg1:#04211f;--bg2:#0b4a43;--ink:#e6f5ee;--mute:#9cc7b8;--glow:#e3f58a;--leaf:#7fd6a0;--water:#6fc3d6;--card:rgba(255,255,255,.07);--line:rgba(180,240,215,.2);--ok:#7fe0a8;--okbg:rgba(80,200,140,.2);--bad:#ff8a9d;--badbg:rgba(255,100,130,.18);--hl:rgba(227,245,138,.16);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg1:#effaf3;--bg2:#d3ede1;--ink:#12362f;--mute:#4a7266;--glow:#7a8a00;--leaf:#2e9e6b;--water:#2b8fa6;--card:rgba(255,255,255,.78);--line:rgba(30,100,80,.2);--ok:#1f8a58;--okbg:#dff5e8;--bad:#c93a5a;--badbg:#fde4eb;--hl:#f1f6c8}}
+:root[data-theme="light"]{--bg1:#effaf3;--bg2:#d3ede1;--ink:#12362f;--mute:#4a7266;--glow:#7a8a00;--leaf:#2e9e6b;--water:#2b8fa6;--card:rgba(255,255,255,.78);--line:rgba(30,100,80,.2);--ok:#1f8a58;--okbg:#dff5e8;--bad:#c93a5a;--badbg:#fde4eb;--hl:#f1f6c8}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{margin:0;min-height:100vh;background:linear-gradient(180deg,var(--bg1),var(--bg2)) fixed;color:var(--ink);font:16px/1.7 "Be Vietnam Pro",system-ui,sans-serif;overflow-x:hidden}
+h1,h2{font-family:"Playfair Display",Georgia,serif;margin:0;line-height:1.2}
+nav{position:sticky;top:0;z-index:5;display:flex;gap:6px;align-items:center;overflow-x:auto;padding:10px 14px;background:color-mix(in srgb,var(--bg1) 80%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav a{white-space:nowrap;color:var(--ink);text-decoration:none;font-size:14px;padding:4px 12px;border-radius:20px}nav a:hover,nav a.on{background:var(--hl);color:var(--glow)}
+nav .sc{margin-left:auto;white-space:nowrap;font-size:14px;color:var(--glow)}
+#fx{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.ff{position:absolute;bottom:-10px;width:5px;height:5px;border-radius:50%;background:var(--glow);box-shadow:0 0 10px 3px var(--glow);opacity:0;animation:up linear infinite}
+@keyframes up{10%{opacity:.8}100%{transform:translate(30px,-105vh);opacity:0}}
+.lf{position:absolute;top:-30px;width:16px;height:16px;background:var(--leaf);border-radius:0 100% 0 100%;opacity:.5;animation:fall linear infinite}
+@keyframes fall{to{transform:translate(80px,110vh) rotate(540deg)}}
+main{position:relative;z-index:1;max-width:820px;margin:auto;padding:0 18px 80px}
+.hero{text-align:center;padding:50px 0 30px}
+.hero svg{width:190px;height:200px;overflow:visible}
+.gl{animation:pulse 3s ease-in-out infinite}@keyframes pulse{50%{opacity:.55}}
+.hero h1{font-size:clamp(34px,8vw,58px);color:var(--glow);text-shadow:0 0 24px color-mix(in srgb,var(--glow) 50%,transparent)}
+.hero p{color:var(--mute);max-width:480px;margin:10px auto}
+.rip{width:240px;height:50px;margin:-10px auto 0;position:relative}
+.rip i{position:absolute;inset:0;border:2px solid var(--water);border-radius:50%;opacity:0;animation:rp 3.6s ease-out infinite}.rip i:nth-child(2){animation-delay:1.2s}.rip i:nth-child(3){animation-delay:2.4s}
+@keyframes rp{from{transform:scale(.2);opacity:.8}to{transform:scale(1);opacity:0}}
+section{padding:44px 0 4px}
+h2{font-size:clamp(24px,5vw,32px);color:var(--glow)}.sub{color:var(--mute);margin:2px 0 16px}
+.rv{opacity:0;transform:translateY(26px);transition:.8s}.rv.in{opacity:1;transform:none}
+.pas{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:6px 20px;margin-bottom:18px;backdrop-filter:blur(6px)}
+.pas p{margin:12px 0}.bl{color:var(--glow);white-space:nowrap}
+.q{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin-bottom:14px;backdrop-filter:blur(6px)}
+.q>p{margin:0 0 8px;font-weight:500}.q small{color:var(--glow);font-weight:600}
+.o{display:block;width:100%;text-align:left;font:inherit;color:var(--ink);background:none;border:1px solid var(--line);border-radius:10px;padding:7px 12px;margin:5px 0;cursor:pointer;transition:.2s}
+.o:hover:not(:disabled){border-color:var(--glow);background:var(--hl)}.o:disabled{cursor:default}
+.o.ok{background:var(--okbg);border-color:var(--ok)}.o.no{background:var(--badbg);border-color:var(--bad);animation:sh .3s}
+@keyframes sh{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.ex{display:none;margin-top:8px;padding:9px 12px;border-radius:10px;font-size:14.5px;background:var(--hl)}.ex.show{display:block;animation:fd .4s}
+@keyframes fd{from{opacity:0;transform:translateY(-6px)}}
+#sum{display:none;text-align:center;border:1px solid var(--glow);border-radius:16px;padding:26px;margin-top:40px;background:var(--card)}#sum.show{display:block;animation:fd .6s}
+#sum b{display:block;font:700 44px "Playfair Display",serif;color:var(--glow)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div id="fx"></div>
+<nav id="nv"></nav>
+<main>
+<header class="hero">
+<svg viewBox="0 0 190 200"><defs><radialGradient id="g"><stop offset="0" stop-color="#e3f58a" stop-opacity=".9"/><stop offset="1" stop-color="#e3f58a" stop-opacity="0"/></radialGradient></defs>
+<circle class="gl" cx="95" cy="82" r="80" fill="url(#g)"/>
+<path d="M70 120V80a25 25 0 1 1 50 0v40z" fill="#e3f58a" fill-opacity=".25" stroke="#e3f58a" stroke-width="2"/>
+<path d="M95 118V92M95 96c-14 0-20-8-20-18 12 0 20 6 20 18zm0-6c0-10 8-18 20-18 0 10-8 18-20 18z" fill="#7fd6a0" stroke="#7fd6a0" stroke-width="1.5"/>
+<rect x="62" y="120" width="66" height="14" rx="4" fill="#1e6b5c"/><path d="M58 134h74l-6 50H64z" fill="#157060"/><ellipse cx="95" cy="134" rx="37" ry="7" fill="#2a9a80"/></svg>
+<div class="rip"><i></i><i></i><i></i></div>
+<h1>Green Living<br>&amp; Culture</h1><p>Đề thi Tiếng Anh. Chọn đáp án là có ngay giải thích, kèm âm báo đúng/sai.</p></header>
+<div id="app"></div>
+<div id="sum"><span>Hoàn thành đề!</span><b id="fs"></b><span id="fp"></span></div>
+</main>
+<script>
+const $=s=>document.querySelector(s);
+const S=[
+{k:"Dạng 1",t:"Dạng 1: Đọc điền thông báo",sub:"Questions 1–6. Chọn từ thích hợp cho mỗi chỗ trống.",
+p:`<p>Our school is launching a new campaign to help protect the environment and reduce our carbon (1) _____. All students are encouraged to take part in various green activities starting next Monday.</p><p><b>Waste Sorting:</b> Please make sure to throw plastic bottles and paper (2) _____ the green recycling bins placed in the school yard.</p><p><b>Energy Saving:</b> Don’t forget to (3) _____ off lights and fans before leaving the classroom.</p><p><b>Single-use Plastics:</b> We strongly advise students to bring reusable water bottles (4) _____ buying single-use plastic cups at the canteen.</p><p><b>Volunteering:</b> Students who actively participate in cleaning up local parks will be (5) _____ certificates for their contributions to the community.</p><p>Let’s work together to create a cleaner and (6) _____ school environment!</p>`,
+d:`1||footprint|mark|impact|track|0|carbon footprint = lượng khí thải carbon (cụm cố định).
+2||on|into|at|with|1|throw ... into the bins = vứt vào thùng rác.
+3||turn|take|put|give|0|turn off = tắt (đèn, quạt). Take off = cởi/cất cánh; put off = trì hoãn.
+4||instead of|in spite of|on account of|in addition to|0|instead of + V-ing = thay vì (mua cốc nhựa).
+5||awarded|awarding|award|awards|0|Bị động tương lai: will be awarded = sẽ được trao.
+6||sustainable|sustain|sustainably|sustainability|0|Song song với “cleaner” (tính từ) nên cần tính từ: sustainable.`},
+{k:"Dạng 2",t:"Dạng 2: Đọc điền tờ rơi",sub:"Questions 7–12.",
+p:`<p>Culture shock is a common experience for people living or studying in a foreign country. Understanding cultural differences can help you adapt (7) _____ to new environments.</p><p>Why does cultural diversity matter? It enriches our lives by exposing us to new traditions, languages, and ways of life. Respecting diversity helps build a peaceful and harmonious (8) _____.</p><p><b>Overcoming culture shock:</b><br>• Keep an open mind and avoid (9) _____ quick judgments about local customs.<br>• Learn a few basic phrases of the local language to make (10) _____ easier.<br>• Participate in local cultural festivals to experience traditional music, art, and food.</p><p><b>Remember!</b> (11) _____ you feel overwhelmed, talk to local friends or teachers for guidance. By embracing cultural differences, we gain valuable knowledge and broaden our (12) _____ of the world.</p>`,
+d:`7||easily|ease|easy|easiness|0|Cần trạng từ bổ nghĩa cho động từ “adapt”: easily.
+8||society|relationship|background|lifestyle|0|“a peaceful and harmonious society” = một xã hội hòa bình, hòa hợp.
+9||making|doing|taking|giving|0|avoid + V-ing; make judgments = đưa ra phán xét.
+10||communication|communicate|communicative|communicatively|0|make + danh từ + adj: communication easier.
+11||If|Unless|Although|Because|0|“If you feel overwhelmed” = nếu bạn cảm thấy quá tải.
+12||understanding|vision|memory|attention|0|broaden our understanding of the world = mở rộng hiểu biết về thế giới.`},
+{k:"Dạng 3",t:"Dạng 3: Sắp xếp hội thoại và đoạn văn",sub:"Questions 13–17. Chọn thứ tự hợp lý nhất.",d:`13|a. Nam: I think adopting a green lifestyle is essential for teenagers today.<br>b. Lan: Exactly! Small habits like turning off electrical devices can make a huge difference.<br>c. Nam: What simple actions do you usually do to protect the environment?<br>d. Lan: Well, I always carry my own cloth bag when shopping to reduce plastic waste.|a-c-d-b|c-d-a-b|a-b-c-d|c-a-d-b|2|Nam nêu quan điểm (a), Lan đồng ý và nêu ví dụ (b), Nam hỏi cụ thể (c), Lan trả lời (d).
+14|a. Student: Excuse me, teacher. Could you explain what “carbon footprint” means?<br>b. Teacher: It’s the total amount of greenhouse gases produced by our daily activities.<br>c. Student: I see. So buying local food can help reduce it, right?<br>d. Teacher: That’s correct because transporting food over long distances consumes a lot of fuel.|a-b-c-d|b-a-d-c|a-c-b-d|c-b-a-d|0|Hỏi định nghĩa (a), giải thích (b), hỏi ứng dụng (c), xác nhận (d).
+15|a. Alexandre Yersin was a famous French-Swiss physician and bacteriologist.<br>b. After settling in Nha Trang, Vietnam, he devoted his life to medical research and helping local people.<br>c. His discovery of the bacterium responsible for the plague saved millions of lives worldwide.<br>d. Today, his remarkable legacy and dedication to science are still deeply remembered by Vietnamese people.|a-c-b-d|a-b-c-d|b-a-c-d|c-a-b-d|0|Giới thiệu Yersin (a), thành tựu tìm ra vi khuẩn dịch hạch (c), sau đó định cư ở Nha Trang và cống hiến (b), di sản ngày nay (d). Ông phát hiện vi khuẩn trước khi định cư ở Nha Trang nên (c) đứng trước (b).
+16|a. Secondly, sorting household waste allows paper, glass, and metal to be recycled efficiently.<br>b. Living a sustainable life brings numerous benefits to individuals and society.<br>c. In conclusion, practicing green habits daily helps safeguard our planet for future generations.<br>d. Firstly, reducing electricity usage helps families save money on utility bills.|b-d-a-c|b-a-d-c|d-a-b-c|a-b-c-d|0|Câu chủ đề (b), Firstly (d), Secondly (a), In conclusion (c).
+17|a. Dear Mark, I am writing to tell you about an inspiring biography I read last weekend.<br>b. The book describes the extraordinary life of a scientist who discovered life-saving treatments.<br>c. What impressed me most was his willingness to overcome hardships to serve humanity.<br>d. I think you would love reading this book, so I can lend it to you next week.<br>e. Best wishes, Phong.|a-b-c-d-e|a-c-b-d-e|b-a-c-d-e|a-d-b-c-e|0|Thư ngắn: lời chào và lý do (a), nội dung sách (b), cảm nhận (c), đề nghị cho mượn (d), lời chúc (e).`},
+{k:"Dạng 4",t:"Dạng 4: Điền mệnh đề vào đoạn văn",sub:"Questions 18–22.",
+p:`<p>Many people desire to live a long and healthy life. Medical experts emphasize that maintaining good physical health (18) _____. Eating a balanced diet rich in vegetables, fruits, and whole grains provides essential nutrients (19) _____.</p><p>In addition to nutrition, regular physical activity plays a vital role in preventing chronic diseases. People who engage in daily exercise (20) _____. Furthermore, managing stress through mindfulness or outdoor hobbies is equally important because prolonged stress can harm immune systems. Doctors also highlight the importance of getting sufficient sleep each night. Sleeping 7 to 8 hours daily allows the body to repair itself, (21) _____. By combining proper nutrition, exercise, and adequate rest, individuals can significantly increase their life expectancy and (22) _____.</p>`,
+d:`18||requires a combination of healthy habits and lifestyle choices|which required combining healthy habits with lifestyle choices|requiring healthy habits to combine with lifestyle choices|has required healthy habits combined lifestyle choices|0|Chủ ngữ là V-ing “maintaining...” (số ít) nên động từ chính: requires.
+19||that strengthen the immune system and boost energy levels|strengthening the immune system and boosted energy levels|which strengthens immune system and boosting energy levels|strengthened the immune system to boost energy levels|0|MĐQH bổ nghĩa “nutrients” (số nhiều): that strengthen and boost.
+20||tend to have lower risks of developing heart disease|tending to lower risks of developing heart disease|who have lower risks to develop heart disease|which tend to lower risks in heart disease development|0|Cần động từ chính cho chủ ngữ “People” (số nhiều): tend to.
+21||which improves mental clarity and overall productivity|improving mental clarity and productivity was achieved|that mental clarity and overall productivity improve|this improved mental clarity as well as overall productivity|0|“which” thay cho cả mệnh đề trước, động từ số ít: improves.
+22||enjoy a high quality of life in their senior years|enjoying high quality life in senior years|to enjoy high quality life when getting senior|enjoyed high quality life during senior years|0|Song song với “can ... increase and enjoy”: động từ nguyên mẫu.`},
+{k:"Dạng 5",t:"Dạng 5: Đọc hiểu bài 1",sub:"Questions 23–30. Multiculturalism.",
+p:`<p>Globalization and modern migration have made multiculturalism a central feature of many nations. A multicultural society is one where people from diverse cultural, racial, and religious backgrounds live together. This cultural blending offers major social benefits, but it also presents unique challenges that require mutual understanding and respect.</p><p>One major advantage of multiculturalism is the enrichment of daily life. Different cultures bring unique traditions, cuisines, music, and art, making community life vibrant and varied. For instance, international food festivals allow local residents to sample dishes from around the world, fostering curiosity and appreciation for other ways of life. Moreover, living alongside people with different viewpoints helps individuals develop tolerance and broader perspectives.</p><p>In addition to cultural enrichment, multiculturalism offers economic advantages. Diversity in the workforce encourages innovation and creativity, as individuals with different life experiences bring novel ideas to problem-solving. Companies that embrace cultural diversity are often better equipped to operate in international markets. However, building a successful multicultural community is not without obstacles. Cultural misunderstandings can lead to conflicts or social isolation if groups fail to communicate effectively. Some newcomers may experience culture shock, feeling confused or anxious when trying to adapt to unfamiliar social norms. To overcome these challenges, governments and local communities must implement integration programs, language classes, and cultural exchanges that encourage social cohesion.</p>`,
+d:`23|What is the main idea of the passage?|The benefits and challenges of living in a multicultural society|How to overcome culture shock when moving abroad|The economic benefits of international food festivals|Why globalization reduces cultural differences|0|Đoạn 1: “major social benefits, but ... unique challenges” bao quát cả bài.
+24|According to paragraph 2, multiculturalism enriches daily life by ___.|introducing diverse cuisines, art, and traditions|forcing everyone to learn new languages|eliminating local traditions entirely|making communities adopt a single lifestyle|0|Đoạn 2: “bring unique traditions, cuisines, music, and art”.
+25|The word “vibrant” in paragraph 2 is closest in meaning to ___.|lively|quiet|boring|traditional|0|vibrant (sôi động) ≈ lively.
+26|According to paragraph 3, why does cultural diversity benefit businesses?|It brings novel ideas and approaches to problem-solving.|It reduces operating expenses for local companies.|It allows businesses to avoid hiring local workers.|It guarantees instant success in local markets.|0|Đoạn 3: “bring novel ideas to problem-solving”.
+27|The phrase “culture shock” refers to ___.|feelings of anxiety or confusion caused by unfamiliar customs|physical illnesses contracted when traveling to foreign countries|excitement experienced when attending international festivals|financial difficulties faced by immigrants in new countries|0|Bài giải thích: “feeling confused or anxious when trying to adapt to unfamiliar social norms”.
+28|The word “it” in paragraph 1 refers to ___.|a multicultural society|modern migration|cultural blending|global economy|2|“This cultural blending offers ... but it also presents”: it = cultural blending.
+29|Which is NOT mentioned as a solution to integration challenges?|Banning immigrants from practicing their native customs|Implementing cultural exchange programs|Offering language classes for newcomers|Promoting community cohesion initiatives|0|Bài chỉ nêu chương trình hội nhập, lớp ngôn ngữ, giao lưu văn hóa; không nhắc đến việc cấm phong tục.
+30|Which can be inferred from the passage?|Successful integration requires efforts from both local communities and newcomers.|Cultural misunderstandings cannot be solved through communication.|Economic growth is the only goal of multicultural societies.|Immigrants should give up their native cultures completely.|0|Người mới phải thích nghi, cộng đồng phải tạo chương trình hội nhập: cần nỗ lực hai phía.`},
+{k:"Dạng 6",t:"Dạng 6: Đọc hiểu bài 2",sub:"Questions 31–40. Green Living.",
+p:`<p><b class="bl">[I]</b> In recent years, environmentalists have increasingly emphasized the concept of “Green Living” as an effective response to climate change. <b class="bl">[II]</b> Green living refers to a lifestyle that attempts to reduce an individual’s or society’s use of the Earth’s natural resources. <b class="bl">[III]</b> By adopting eco-friendly habits, individuals can minimize their environmental impact and protect natural ecosystems. <b class="bl">[IV]</b></p><p>One of the primary steps in green living is managing domestic waste. Millions of tons of plastic waste end up in oceans annually, harming marine wildlife and destroying ecosystems. To combat this issue, many households have adopted the principle of the “3 Rs”: Reduce, Reuse, and Recycle. Reducing consumption by avoiding unnecessary purchases is the most effective approach. Reusing items, such as taking cloth bags to supermarkets, prevents single-use plastics from polluting the environment. Finally, sorting recyclable materials like paper, glass, and metal ensures that waste is processed efficiently instead of ending up in landfills.</p><p>Another crucial aspect of green living is energy and water conservation. Simple daily actions, such as switching off unused electrical appliances, using energy-saving LED bulbs, and turning off running taps while brushing teeth, can significantly reduce energy and water consumption. Furthermore, transitioning to renewable energy sources, such as installing solar panels on rooftops, offers a sustainable long-term solution that drastically cuts household carbon emissions.</p><p>Finally, eco-friendly transportation choices contribute significantly to environmental protection. Motor vehicles powered by fossil fuels are major sources of urban air pollution and greenhouse gas emissions. Walking, cycling, using public transit, or switching to electric vehicles helps improve air quality and reduces dependence on nonrenewable fossil fuels.</p><p>Although adopting a green lifestyle requires initial effort and lifestyle adjustments, the long-term benefits for human health and the environment are immeasurable. Every small action, when multiplied by millions of people, can transform the world into a cleaner, healthier, and more sustainable home for future generations.</p>`,
+d:`31|Where in paragraph 1 does this sentence best fit? “It encourages people to make conscious daily choices that preserve planetary health.”|[I]|[II]|[III]|[IV]|2|“It” = Green living vừa được định nghĩa ở [II]; đặt ở [III] để mở rộng ý trước khi nói về thói quen cụ thể.
+32|According to paragraph 2, what is the MOST effective principle among the “3 Rs”?|Reducing consumption|Reusing plastic bottles|Recycling metal waste|Burning landfill waste|0|Đoạn 2: “Reducing consumption ... is the most effective approach.”
+33|The word “combat” in paragraph 2 is closest in meaning to ___.|tackle|encourage|ignore|increase|0|combat (đối phó, giải quyết) ≈ tackle.
+34|In paragraph 3, “a sustainable long-term solution that drastically cuts household carbon emissions” refers to ___.|daily actions|solar panels|electrical appliances|renewable energy sources|3|“solution” chính là việc chuyển sang renewable energy sources (như lắp pin mặt trời), nên chọn D.
+35|According to paragraph 3, installing solar panels is beneficial because ___.|it significantly cuts household carbon emissions|it eliminates the need to sort household waste|it requires no maintenance expenses|it replaces public transport systems|0|Đoạn 3: “a sustainable long-term solution that drastically cuts household carbon emissions”.
+36|The word “nonrenewable” in paragraph 4 is OPPOSITE in meaning to ___.|sustainable|limited|harmful|expensive|0|Trái nghĩa với non-renewable (không tái tạo, cạn kiệt) là sustainable (bền vững).
+37|Which is TRUE according to the passage?|Motor vehicles powered by fossil fuels contribute to urban air pollution.|Reusing items is less effective than dumping waste in landfills.|Switching to electric vehicles increases dependence on fossil fuels.|Individual actions have no impact on global climate change.|0|Đoạn 4: “major sources of urban air pollution and greenhouse gas emissions”.
+38|Which best summarizes paragraph 4?|Choosing green transportation methods improves air quality and reduces emissions.|Cycling is the only way to eliminate greenhouse gases completely.|Public transit systems are too expensive for everyday commuting.|Fossil fuels remain the most efficient energy source for motor vehicles.|0|Cả đoạn nói về giao thông thân thiện môi trường giúp cải thiện không khí, giảm khí thải.
+39|Which can be inferred from the final paragraph?|Collective small green actions can create significant positive global change.|Living green is too difficult for ordinary people to achieve.|Government regulations are the only solution to environmental degradation.|Human health is unrelated to environmental conditions.|0|“Every small action, when multiplied by millions of people, can transform the world”.
+40|Which best serves as the title for the passage?|Green Living: Practical Steps Towards a Sustainable Future|The History of Marine Pollution and Plastic Waste|How to Install Solar Panels at Home|The Economic Advantages of Renewable Energy|0|Bài định nghĩa Green Living rồi nêu các bước thực tế: rác, năng lượng, giao thông.`}
+];
+/* fx */
+const fx=$("#fx");for(let i=0;i<16;i++){const e=document.createElement("span");e.className="ff";e.style.cssText=`left:${Math.random()*100}%;animation-duration:${8+Math.random()*9}s;animation-delay:${Math.random()*10}s`;fx.appendChild(e)}
+for(let i=0;i<7;i++){const e=document.createElement("span");e.className="lf";e.style.cssText=`left:${Math.random()*100}%;animation-duration:${14+Math.random()*10}s;animation-delay:${Math.random()*14}s`;fx.appendChild(e)}
+/* sound */
+let ac;function tone(f,t,d,ty){const o=ac.createOscillator(),g=ac.createGain();o.type=ty;o.frequency.value=f;g.gain.setValueAtTime(.15,ac.currentTime+t);g.gain.exponentialRampToValueAtTime(.001,ac.currentTime+t+d);o.connect(g);g.connect(ac.destination);o.start(ac.currentTime+t);o.stop(ac.currentTime+t+d)}
+function snd(ok){try{ac=ac||new (window.AudioContext||window.webkitAudioContext)();if(ok){tone(660,0,.15,"sine");tone(880,.12,.25,"sine")}else{tone(220,0,.18,"sawtooth");tone(150,.15,.3,"sawtooth")}}catch(e){}}
+/* app */
+let ok=0,tot=0;const N=S.reduce((a,s)=>a+s.d.split("\n").length,0);
+$("#nv").innerHTML=S.map((s,i)=>`<a href="#s${i}">${s.k}</a>`).join("")+`<span class="sc" id="sc">Đúng 0/0</span>`;
+const bl=h=>h.replace(/\((\d+)\) _____/g,'<b class="bl">($1)</b>');
+$("#app").innerHTML=S.map((s,si)=>{s.q=s.d.split("\n").map(l=>{const p=l.split("|");return{n:p[0],s:p[1],o:p.slice(2,6),a:+p[6],e:p[7]}});
+ return `<section class="rv" id="s${si}"><h2>${s.t}</h2><p class="sub">${s.sub}</p>${s.p?`<div class="pas">${bl(s.p)}</div>`:""}${s.q.map((q,qi)=>`<div class="q" data-s="${si}" data-q="${qi}"><p><small>Question ${q.n}.</small> ${q.s}</p>${q.o.map((o,j)=>`<button class="o" data-j="${j}">${"ABCD"[j]}. ${o}</button>`).join("")}<div class="ex"></div></div>`).join("")}</section>`}).join("");
+$("#app").onclick=e=>{const b=e.target.closest(".o");if(!b||b.disabled)return;const q=b.closest(".q"),it=S[q.dataset.s].q[q.dataset.q],j=+b.dataset.j,g=j==it.a,bs=q.querySelectorAll(".o");
+ bs.forEach(x=>x.disabled=true);bs[it.a].classList.add("ok");if(!g)b.classList.add("no");
+ const x=q.querySelector(".ex");x.innerHTML=`${g?"✔ Chính xác.":"✘ Chưa đúng."} Đáp án: <b>${"ABCD"[it.a]}</b>. ${it.e}`;x.classList.add("show");
+ tot++;if(g)ok++;snd(g);$("#sc").textContent=`Đúng ${ok}/${tot}`;
+ if(tot==N){$("#fs").textContent=`${ok} / ${N}`;$("#fp").textContent=`${Math.round(ok/N*100)}% câu đúng`;$("#sum").classList.add("show");$("#sum").scrollIntoView({behavior:"smooth",block:"center"})}};
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.03});
+document.querySelectorAll(".rv").forEach(s=>io.observe(s));
+const nl=[...document.querySelectorAll("nav a")],io2=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){nl.forEach(a=>a.classList.toggle("on",a.getAttribute("href")=="#"+x.target.id))}}),{rootMargin:"-40% 0px -55% 0px"});
+document.querySelectorAll("section").forEach(s=>io2.observe(s));
+</script>
+</body>
+</html>
